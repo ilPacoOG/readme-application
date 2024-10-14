@@ -2,6 +2,7 @@
 import fs from "fs";
 import inquirer from 'inquirer';
 import path from "path";
+import generateMarkdown from './utils/generateMarkdown.js'
 
 // const generateMarkdown = require("./utils/generateMarkdown");
 
@@ -21,7 +22,7 @@ const questions = [
     {
         type: 'input',
         name: 'useCase',
-        message: 'What prblem does it solve?',
+        message: 'What problem does it solve?',
     },
     {
         type: 'input',
@@ -37,25 +38,26 @@ const questions = [
 
 ];
 
-// inquirer.prompt(questions).then(answers => {
-//     console.log(`Project Name: ${answers.projectName}`);
-//     console.log(`Description: ${answers.description}`);
-//     console.log(`Use Case: ${answers.useCase}`);
-//     console.log(`Motivation: ${answers.motivation}`);
-//     console.log(`Tools Used: ${answers.toolsUsed}`);
-    
-//   });
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//   }
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  }
+ 
 
 // // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((data) => {
-        console.log(JSON.stringify(data, null, " "));
-        
-    });
+    inquirer.prompt(questions)
+      .then((answers) => {
+        console.log("README.md file is being generated.");
+        //added the following to handle errors in writing the README file. 
+        try {
+          writeToFile("README.md", generateMarkdown(answers));
+          console.log("README.md successfully created.");
+        } catch (error) {
+          console.error("Error writing the README.md file:", error);
+        }
+      });
 }
 
 // // Function call to initialize app

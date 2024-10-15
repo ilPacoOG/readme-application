@@ -15,12 +15,12 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'desciption',
+        name: 'description',
         message: 'Please describe your project.',
     },
     {
         type: 'input',
-        name: 'innstallation',
+        name: 'installation',
         message: 'How is the application installed?',
     },
     {
@@ -51,13 +51,13 @@ const questions = [
     {
         type: 'input',
         name: 'dependencies',
-        message: 'Which dependencies were used to creat this application?'
+        message: 'Which dependencies were used to create this application?'
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Please choose the license that this project operates under?', /* options taken from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba */
-        choices: 
+        choices: ['Apache2.0', 'Boost1.0', 'BSD', 'Eclipse', 'MIT', 'None'],        
     }
 
 ];

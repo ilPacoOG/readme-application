@@ -70,6 +70,7 @@ ${data.description}
 - [Dependencies](#dependencies)
 - [GitHub Username](#github-username)
 - [Deployed URL](#deployed-url)
+- [Questions](#questions)
 
 ## Installation
 ${data.installation}
@@ -91,7 +92,11 @@ ${data.dependencies}
 
 ## Deployed URL
 [${data.deployed}](${data.deployed})
-  `;
+
+## Questions
+If you have any questions about the project, you can reach me by email at ${data.email ? data.email : 'No email provided'}
+
+`;
 }
 
 export default generateMarkdown;

@@ -58,7 +58,12 @@ const questions = [
         name: 'license',
         message: 'Please choose the license that this project operates under?', /* options taken from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba */
         choices: ['Apache2.0', 'Boost1.0', 'BSD', 'Eclipse', 'MIT', 'None'],        
-    }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please provide and email where users can reach you.',
+    },
 
 ];
 

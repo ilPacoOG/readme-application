@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-import fs, { link } from "fs";
+import fs from "fs";
 import inquirer from 'inquirer';
 import path from "path";
 import generateMarkdown from './utils/generateMarkdown.js';
@@ -10,7 +10,7 @@ import generateMarkdown from './utils/generateMarkdown.js';
 const questions = [
     {
         type: 'input',
-        name: 'projectName',
+        name: 'title',
         message: 'What is the name of your project?',
     },
     {
@@ -26,7 +26,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'What is the use case for this application'
+        message: 'What is the use case for this application?'
     },
     {
         type: 'input',

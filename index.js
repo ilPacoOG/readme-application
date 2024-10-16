@@ -45,11 +45,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'deployed',
-        message: 'What is the URL where this project is deployed?'
-    },
-    {
-        type: 'input',
         name: 'dependencies',
         message: 'Which dependencies were used to create this application?'
     },

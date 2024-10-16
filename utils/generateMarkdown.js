@@ -69,7 +69,6 @@ ${data.description}
 - [Testing](#testing)
 - [Dependencies](#dependencies)
 - [GitHub Username](#github-username)
-- [Deployed URL](#deployed-url)
 - [Questions](#questions)
 
 ## Installation
@@ -89,9 +88,6 @@ ${data.dependencies}
 
 ## GitHub Username
 [${data.username}](https://github.com/${data.username})
-
-## Deployed URL
-[${data.deployed}](${data.deployed})
 
 ## Questions
 If you have any questions about the project, you can reach me by email at ${data.email ? data.email : 'No email provided'}

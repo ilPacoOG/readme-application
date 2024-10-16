@@ -64,6 +64,7 @@ ${data.description}
 
 ## Table of Contents
 - [Installation](#installation)
+${data.video ? '- [How-To Video](#how-to-video)' : ''} <!-- ternary operator used to conditionally add demo video if provided by user when prompted. The concept came from a 'README generator' how-to I found but did not save -->
 - [Usage](#usage)
 - [Contributions](#contributions)
 - [Testing](#testing)
@@ -73,6 +74,9 @@ ${data.description}
 
 ## Installation
 ${data.installation}
+
+${data.video ? `## How-To Video\nThe how-to video and demonstration can be found [here](${data.video}).\n` : ''}  <!-- Conditionally add How-To Video section -->
+
 
 ## Usage
 ${data.usage}

@@ -25,6 +25,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'video',
+        message: "Please provide a link to an instructional video if available."
+    },
+    {
+        type: 'input',
         name: 'usage',
         message: 'What is the use case for this application?'
     },

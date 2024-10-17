@@ -79,8 +79,8 @@ function init() {
     inquirer.prompt(questions)
       .then((answers) => {
         console.log("README.md file is being generated.");
-        //added the following to handle errors in writing the README file. 
-        try {
+        //added the following to handle errors in writing the README file. description of try catch found in JS error handling at W3 https://www.w3schools.com/js/js_errors.asp#:~:text=When%20an%20error%20occurs%2C%20JavaScript,two%20properties%3A%20name%20and%20message 
+        try { /* this can also be accomplished with return writeToFile("README.md", generateMarkdown(answers)); .then(() => { console.log("README.md successfully created."); */
           writeToFile("README.md", generateMarkdown(answers));
           console.log("README.md successfully created.");
         } catch (error) {
